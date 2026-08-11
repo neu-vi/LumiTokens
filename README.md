@@ -453,8 +453,3 @@ LumiTokens builds on
 [LVSM](https://github.com/haian-jin/LVSM). We thank the authors and contributors
 of LVSM and the other projects listed in
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-## Contact
-
-For questions and bug reports, please use the repository issue tracker. Report
-security-sensitive matters privately as described in [SECURITY.md](SECURITY.md).
