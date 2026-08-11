@@ -1,0 +1,59 @@
+checkpoint: checkpoints/mlp/lumitokens_relight_256_mlp.pt
+
+model:
+  image_tokenizer: {image_size: 256, patch_size: 8, in_channels: 9}
+  target_pose_tokenizer: {image_size: 256, patch_size: 8, in_channels: 6}
+  env_tokenizer: {image_size: 256, patch_size: 8, in_channels: 9}
+  decoder_head:
+    type: mlp
+    mlp: {use_sigmoid: true}
+  transformer:
+    d: 768
+    d_head: 64
+    encoder_n_layer: 12
+    decoder_n_layer: 12
+    special_init: true
+    depth_init: true
+    use_qk_norm: true
+    n_latent_vectors: 3072
+    use_albedo_decoder: false
+    editor: {n_layer: 12, init_scale: 0.1}
+
+training:
+  dataset_path: examples/polyhaven_lvsm_test/full_list.txt
+  local_dataset_base: examples/polyhaven_lvsm_test
+  build_loss: false
+  center_crop: true
+  square_crop: true
+  scene_scale_factor: 1.35
+  whiteEnvInput: false
+  single_env_map: false
+  relight_signals: [envmap]
+  use_relit_images: true
+  exclude_white_env0_from_relit_sampling: false
+  multi_edit: {enable: false}
+  grad_checkpoint_every: 1
+  num_input_views: 4
+  num_target_views: 8
+  num_views: 12
+  num_workers: 2
+  prefetch_factor: 32
+  # The fixed quickstart index explicitly lists the eight targets after the
+  # four context views, so no second target resampling is needed.
+  target_has_input: false
+  use_amp: true
+  amp_dtype: bf16
+  use_tf32: true
+  l2_loss_weight: 1.0
+  lpips_loss_weight: 0.0
+  perceptual_loss_weight: 0.5
+  view_selector: {min_frame_dist: 15, max_frame_dist: 60}
+
+inference:
+  if_inference: true
+  view_idx_file_path: examples/quickstart_views_256.json
+  relight_scene_name: ArmChair_01_white_env_0
+  random_chunk_sampling: false
+  random_chunk_seed: 777
+  render_all_views: false
+  compute_metrics: false

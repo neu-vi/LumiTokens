@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lumitokens"
+version = "0.1.0"
+description = "LumiTokens public inference code"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = {file = "LICENSE"}
+
+[tool.setuptools.packages.find]
+include = ["lumitokens*"]

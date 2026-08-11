@@ -1,0 +1,21 @@
+# Install the matching PyTorch, torchvision, and xFormers CUDA wheels first;
+# see Quick Start in README.md.
+
+datasets==2.14.5
+easydict==1.13
+einops==0.8.1
+imageio==2.33.0
+imageio-ffmpeg==0.5.0
+jaxtyping==0.3.3
+lpips==0.1.4
+numpy==1.26.4
+omegaconf==2.1.1
+opencv-python-headless==4.7.0.72
+Pillow==10.0.1
+rich==14.2.0
+scikit-image==0.24.0
+scipy==1.16.3
+torchmetrics==1.8.2
+tqdm==4.67.1
+transformers==4.30.2
+wandb==0.18.7

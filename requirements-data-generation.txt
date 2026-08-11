@@ -1,0 +1,10 @@
+# Rendering environment used during development (Linux, Python 3.11).
+bpy==4.4.0
+imageio==2.37.0
+numpy==1.26.4
+simple-parsing==0.1.7
+
+# Preprocessing additions. PyTorch is installed by the main environment setup.
+opencv-python
+Pillow
+pyexr

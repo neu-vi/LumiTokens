@@ -1,0 +1,103 @@
+# Credentials and local environment files
+.env
+.env.*
+!.env.example
+configs/api_keys.yaml
+configs/api_keys_*.yaml
+!configs/api_keys_example.yaml
+*credentials*.json
+*credentials*.yaml
+*credentials*.yml
+*.pem
+*.key
+*.p12
+*.pfx
+.netrc
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+.conda/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Editors and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Model weights and large binary artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+/ckpt/
+/ckpt_dpt/
+/checkpoints/*
+!/checkpoints/README.md
+!/checkpoints/SHA256SUMS
+/weights/
+
+# Datasets and preprocessed data
+/data/
+/datasets/
+/data_samples/
+/preprocessed_data/
+/metadata_private/
+/examples/polyhaven_lvsm_test
+/render_objaverse
+
+# Local release planning and review documents
+/CODE_RELEASE_PLAN.md
+/docs/INTERNAL_RELEASE_NOTES.md
+/docs/LICENSING.md
+/docs/RELEASE_SECURITY_CHECKLIST.md
+/docs/RELEASE_STATUS.md
+
+# Generated results and experiment state
+/experiments/
+/experiment_results/
+/outputs/
+/results/
+/result_previews/
+/scene_preview/
+/test_output/
+/metric_checkpoint/
+/wandb/
+/runs/
+/logs/
+*.log
+debug-*.log
+slurm-*.out
+slurm-*.err
+myjob.*.out
+myjob.*.err
+
+# Generated media and archives should be added only after explicit review
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.mp4
+*.mov

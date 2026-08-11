@@ -1,0 +1,27 @@
+# Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+
+Except where a file or `THIRD_PARTY_NOTICES.md` states otherwise, the
+LumiTokens source code and documentation are licensed under the Creative
+Commons Attribution-NonCommercial-ShareAlike 4.0 International license
+(SPDX identifier: `CC-BY-NC-SA-4.0`).
+
+You may view the complete legal code at:
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en
+
+This license requires attribution, permits use and adaptation only for
+noncommercial purposes, and requires shared adaptations to use the same
+license elements. It includes disclaimers of warranties and limitations of
+liability in its full legal code.
+
+LumiTokens adapts source code from LVSM, which is distributed under the same
+CC BY-NC-SA 4.0 license. Copyright and attribution notices in adapted files
+must be retained, and modifications must be identified.
+
+Third-party components remain under their respective licenses. See
+`THIRD_PARTY_NOTICES.md` and the notices within individual source files.
+
+Model weights, datasets, examples, and other artifacts may have separate
+terms. Their inclusion in or availability alongside this repository does not
+change those terms. Each released artifact must carry its own license and
+provenance metadata.

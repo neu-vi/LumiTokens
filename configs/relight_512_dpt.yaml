@@ -1,0 +1,57 @@
+checkpoint: checkpoints/dpt/lumitokens_relight_512_dpt.pt
+
+model:
+  image_tokenizer: {image_size: 512, patch_size: 8, in_channels: 9}
+  target_pose_tokenizer: {image_size: 512, patch_size: 8, in_channels: 6}
+  env_tokenizer: {image_size: 256, patch_size: 8, in_channels: 9}
+  decoder_head:
+    type: dpt
+    dpt:
+      layer_indices: [3, 6, 9, 12]
+      feature_dim: 256
+      fusion_mode: add
+      upsample_mode: bilinear
+      out_activation: sigmoid
+      gate_init: {l3: 0.0, l6: 0.0, l9: 0.0, l12: 1.0}
+  transformer:
+    d: 768
+    d_head: 64
+    encoder_n_layer: 12
+    decoder_n_layer: 12
+    special_init: true
+    depth_init: true
+    use_qk_norm: true
+    n_latent_vectors: 3072
+    use_albedo_decoder: false
+    editor: {n_layer: 12, init_scale: 0.1}
+
+training:
+  dataset_path: examples/polyhaven_lvsm_test/full_list.txt
+  local_dataset_base: examples/polyhaven_lvsm_test
+  build_loss: false
+  center_crop: true
+  square_crop: true
+  scene_scale_factor: 1.35
+  whiteEnvInput: false
+  single_env_map: true
+  relight_signals: [envmap]
+  use_relit_images: true
+  exclude_white_env0_from_relit_sampling: true
+  multi_edit: {enable: false}
+  grad_checkpoint_every: 1
+  num_input_views: 4
+  num_target_views: 1
+  num_views: 5
+  target_has_input: false
+  use_amp: true
+  amp_dtype: bf16
+  use_tf32: true
+  view_selector: {min_frame_dist: 15, max_frame_dist: 60}
+
+inference:
+  if_inference: true
+  view_idx_file_path: null
+  random_chunk_sampling: true
+  random_chunk_seed: 777
+  render_all_views: false
+  compute_metrics: false

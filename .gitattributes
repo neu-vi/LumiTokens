@@ -1,0 +1,20 @@
+* text=auto eol=lf
+
+*.sh text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.exr binary
+*.hdr binary
+*.npy binary
+*.npz binary
+*.pt binary
+*.pth binary
+*.ckpt binary
+*.safetensors binary
