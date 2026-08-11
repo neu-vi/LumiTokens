@@ -436,17 +436,6 @@ If you use LumiTokens, please cite:
 }
 ```
 
-## License and Third-Party Software
-
-Except where noted otherwise, this repository is released under
-[CC BY-NC-SA 4.0](LICENSE). LumiTokens builds on LVSM and includes or adapts
-components with their own attribution requirements. See
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the headers of individual
-files.
-
-Model weights and datasets may use separate terms; consult the corresponding
-model card or data documentation before use.
-
 ## Acknowledgements
 
 LumiTokens builds on
