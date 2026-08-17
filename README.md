@@ -18,6 +18,26 @@ space.</em></p>
 - [Project page](https://neu-vi.github.io/LumiTokens)
 - [Checkpoints and example data](https://drive.google.com/drive/folders/1hbCQBwag8FuhrM3abqpcvNT5s8EPJJL7?usp=sharing)
 
+## README Guide
+
+Use the section that matches your goal:
+
+| Goal | Section |
+| --- | --- |
+| Understand the model and lighting-token workflow | [Method Overview](#method-overview) |
+| Install dependencies and run the smallest example | [Quick Start](#quick-start) |
+| Choose and place pretrained model weights | [Checkpoints](#checkpoints) |
+| Format an existing dataset for LumiTokens | [Input Data](#input-data) |
+| Render and preprocess a new object or scene dataset | [Data Preparation](#data-preparation) |
+| Relight a scene or render every camera pose | [Inference](#inference) |
+| Pre-train, train the editor, or transfer from MLP to DPT | [Training and Fine-Tuning](#training-and-fine-tuning) |
+| Reference LumiTokens in academic work | [Citation](#citation) |
+| Review the projects on which LumiTokens builds | [Acknowledgements](#acknowledgements) |
+
+If you are using LumiTokens for the first time, begin with
+[Quick Start](#quick-start). The remaining sections provide the dataset,
+inference, and training details needed for custom experiments.
+
 ## Method Overview
 
 LumiTokens contains three principal components:
