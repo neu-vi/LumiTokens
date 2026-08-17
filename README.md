@@ -18,25 +18,22 @@ space.</em></p>
 - [Project page](https://neu-vi.github.io/LumiTokens)
 - [Checkpoints and example data](https://drive.google.com/drive/folders/1hbCQBwag8FuhrM3abqpcvNT5s8EPJJL7?usp=sharing)
 
-## README Guide
+## Table of Content
 
-Use the section that matches your goal:
+This README is organized as an end-to-end reference for understanding, running,
+and training LumiTokens. Use the index below to find the relevant information.
 
-| Goal | Section |
+| Section | What to look for |
 | --- | --- |
-| Understand the model and lighting-token workflow | [Method Overview](#method-overview) |
-| Install dependencies and run the smallest example | [Quick Start](#quick-start) |
-| Choose and place pretrained model weights | [Checkpoints](#checkpoints) |
-| Format an existing dataset for LumiTokens | [Input Data](#input-data) |
-| Render and preprocess a new object or scene dataset | [Data Preparation](#data-preparation) |
-| Relight a scene or render every camera pose | [Inference](#inference) |
-| Pre-train, train the editor, or transfer from MLP to DPT | [Training and Fine-Tuning](#training-and-fine-tuning) |
-| Reference LumiTokens in academic work | [Citation](#citation) |
-| Review the projects on which LumiTokens builds | [Acknowledgements](#acknowledgements) |
-
-If you are using LumiTokens for the first time, begin with
-[Quick Start](#quick-start). The remaining sections provide the dataset,
-inference, and training details needed for custom experiments.
+| [Method Overview](#method-overview) | The LumiTokens architecture, Scene Token Editor, lighting representation, and rendering workflow. |
+| [Quick Start](#quick-start) | Environment setup, checkpoint and example-data downloads, and the shortest reproducible inference command. Start here if you are using the repository for the first time. |
+| [Checkpoints](#checkpoints) | Available MLP and DPT models, their resolutions, matching configurations, and expected file locations. |
+| [Input Data](#input-data) | The processed dataset directory structure, scene metadata schema, camera convention, images, and lighting inputs expected by LumiTokens. |
+| [Data Preparation](#data-preparation) | Scripts and documentation for rendering object-centric or scene-level data and converting it into the LumiTokens input format. |
+| [Inference](#inference) | Commands for relighting selected views, rendering every dataset camera pose, controlling memory usage, creating videos, and interpreting the output directory. |
+| [Training and Fine-Tuning](#training-and-fine-tuning) | The complete training sequence: reconstruction pre-training, MLP editor training, lighting-data selection, DPT transfer, and scene-level fine-tuning. |
+| [Citation](#citation) | The BibTeX entry for citing LumiTokens. |
+| [Acknowledgements](#acknowledgements) | The primary projects and contributors on which this release builds. |
 
 ## Method Overview
 
