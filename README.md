@@ -1,5 +1,7 @@
 # LumiTokens: 3D Relighting via Token-Space Lighting Transformation
 
+### [Project Page](https://neu-vi.github.io/LumiTokens) | [Paper](https://arxiv.org/abs/XXXX.XXXXX)
+
 LumiTokens formulates 3D relighting as a direct transformation of latent scene
 tokens. A Scene Token Editor jointly processes scene tokens and tokenized
 lighting signals, producing an editable scene representation that can be
@@ -12,11 +14,6 @@ decoded into multi-view-consistent relit images and novel views.
 <p align="center"><em>LumiTokens supports novel-view relighting under diverse
 light sources and composes successive lighting edits directly in token
 space.</em></p>
-
-## Links
-
-- [Project page](https://neu-vi.github.io/LumiTokens)
-- [Checkpoints and example data](https://drive.google.com/drive/folders/1hbCQBwag8FuhrM3abqpcvNT5s8EPJJL7?usp=sharing)
 
 ## Table of Content
 
